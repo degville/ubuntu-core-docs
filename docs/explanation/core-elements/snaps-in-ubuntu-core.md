@@ -1,3 +1,4 @@
+(ref-snaps-in-ubuntu-core-snaps-in-ubuntu-core)=
 # Snaps in Ubuntu Core
 
 Ubuntu Core is built from *snaps*, a secure, confined, dependency-free, cross-platform Linux packaging format.

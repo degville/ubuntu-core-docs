@@ -1,3 +1,4 @@
+(ref-index-deploy-an-image)=
 # Deploy an image
 
 We create pre-built Ubuntu Core images for several testing platforms. These images are a way to explore Ubuntu Core. Canonical produces official images for the [following platforms](https://ubuntu.com/core/docs/supported-platforms).

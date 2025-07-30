@@ -1,3 +1,4 @@
+(ref-commands-bluetooth-commands)=
 # Bluetooth commands
 
 The purpose of the  *bluez*  snap is to provide the BlueZ Bluetooth stack. Apart from this it contains various tools shipped with BlueZ itself. The following table lists the commands that are provided by the  *bluez*  snap:

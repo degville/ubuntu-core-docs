@@ -107,8 +107,11 @@ Add the following script at `snap/hooks/post-refresh`:
 
 container_name="$SNAP_INSTANCE_NAME"
 
+(ref-deploy-docker-from-a-snap-remove-the-container-so-it-gets-recreated-upon-snaps-service-startup)=
 # Remove the container so it gets recreated upon snap's service startup
+(ref-deploy-docker-from-a-snap-this-results-in-creating-the-container-based-on-the-updated-configuration)=
 # This results in creating the container based on the updated configuration
+(ref-deploy-docker-from-a-snap-such-as-image-nametag-volumes-and-ports)=
 # such as image name/tag, volumes, and ports.
 docker rm "$container_name"
 
@@ -167,8 +170,10 @@ The [`--dangerous`](https://snapcraft.io/docs/install-modes#heading--dangerous) 
 
 Connect the following [interfacess](https://snapcraft.io/docs/interfaces):
 ```shell
+(ref-deploy-docker-from-a-snap-for-access-to-docker-daemon)=
 # For access to Docker Daemon
 sudo snap connect rabbitmq-docker-guide:docker docker:docker-daemon
+(ref-deploy-docker-from-a-snap-for-access-to-docker-cli)=
 # For access to Docker CLI
 sudo snap connect rabbitmq-docker-guide:docker-executables docker:docker-executables
 ```
@@ -228,6 +233,7 @@ To write environment variables into a file whenever the user sets a snap configu
 
 env_file="$SNAP_COMMON/conf.env"
 
+(ref-deploy-docker-from-a-snap-clear-the-file)=
 # Clear the file
 > "$env_file"
 
@@ -330,9 +336,11 @@ This would work if those ports are available on the host. However, it is general
 
 We can make the port mapping configurable using snap configuration options. For example, to make RabbitMQ's AMQP listener port configurable, but falling back to the default:
 ```bash
+(ref-deploy-docker-from-a-snap-read-the-value-set-via-snap-config-option)=
 # Read the value set via snap config option
 amqp_port="$(snapctl get amqp-port)"
 
+(ref-deploy-docker-from-a-snap-if-not-set-use-default)=
 # If not set, use default
 if [[ -z "$amqp_port" ]] ; then
     amqp_port="5672"

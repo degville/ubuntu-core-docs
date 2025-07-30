@@ -1,3 +1,4 @@
+(ref-networkmanager-and-netplan-networkmanager-and-netplan)=
 # NetworkManager and Netplan
 
 Ubuntu Core's default Netplan configuration defers networking to _networkd_.
@@ -21,6 +22,7 @@ The YAML backend replaces the keyfile format used by Network Manager with `/etc/
 The default configuration, for example, can be output by running the `sudo cat /etc/netplan/00-snapd-config.yaml` to produce show following output:
 
 ```yaml
+(ref-networkmanager-and-netplan-this-is-the-network-config-written-by-console-conf)=
 # This is the network config written by 'console-conf'
 network:
   ethernets:

@@ -1,3 +1,4 @@
+(ref-create-a-model-create-a-model)=
 # Create a model
 
 At the heart of custom Ubuntu Core image creation is the _model assertion_. An assertion is a signed recipe that describes the components that comprise a complete image. An assertion is provided as JSON in a text file which is signed by a GPG key associated with the publisher's Ubuntu One account.

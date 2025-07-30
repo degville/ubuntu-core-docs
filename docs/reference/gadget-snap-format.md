@@ -187,40 +187,60 @@ A gadget snap's boot assets can also be automatically updated when the snap is r
 The following specification defines what is supported in `gadget.yaml`:
 
 ```yaml
+(ref-gadget-snap-format-define-the-format-of-this-file-the-default-and-latest-format-is-zero)=
 # Define the format of this file. The default and latest format is zero.
+(ref-gadget-snap-format-clients-reading-this-file-must-reject-it-the-format-is-greater-than)=
 # Clients reading this file must reject it the format is greater than
+(ref-gadget-snap-format-the-supported-one-optional)=
 # the supported one. (optional)
 format: <int>
 
+(ref-gadget-snap-format-default-configuration-options-for-defined-snaps-applied-on-installation)=
 # Default configuration options for defined snaps, applied on installation.
+(ref-gadget-snap-format-the-snap-id-may-be-discovered-via-the-snap-info-command)=
 # The snap ID may be discovered via the snap info command.
+(ref-gadget-snap-format-since-233-snap-id-can-be-the-system-nick-to-cover-the-system)=
 # Since 2.33 snap ID can be the "system" nick to cover the system
+(ref-gadget-snap-format-configuration-optional)=
 # configuration. (optional)
 defaults:
     <snap id>:
         <key>: <value>
 
+(ref-gadget-snap-format-interface-connection-instructions-for-plugs-and-slots-of-seeded)=
 # Interface connection instructions for plugs and slots of seeded
+(ref-gadget-snap-format-snaps-to-connect-at-first-boot-snap-ids-can-be-the-system)=
 # snaps to connect at first boot. snap IDs can be the "system"
+(ref-gadget-snap-format-nick-as-well-omitting-slot-in-an-instruction-is-allowed)=
 # nick as well. Omitting "slot" in an instruction is allowed
+(ref-gadget-snap-format-and-equivalent-then-to-slot-systemplug)=
 # and equivalent then to: slot: system:<plug>
+(ref-gadget-snap-format-since-234-optional)=
 # (since 2.34) (optional)
 connections:
    -  plug: <plug snap id>:<plug>
       slot: <slot snap id>:<slot>
 
+(ref-gadget-snap-format-defines-the-kernel-boot-parameter-allow-list-the--character-can-be-used)=
 # Defines the kernel boot parameter allow list. The * character can be used
+(ref-gadget-snap-format-as-a-wildcard-to-accept-any-parameter-argument-it-can-not-be-used-to-limit-an)=
 # as a wildcard to accept any parameter argument. It can not be used to limit an
+(ref-gadget-snap-format-arguments-scope-for-example-kernel-parameter-2-is-acceptable-but)=
 # argument’s scope. For example, kernel-parameter-2=* is acceptable, but
+(ref-gadget-snap-format-kernel-parameter-2a-is-not)=
 # kernel-parameter-2=a* is not.
 kernel-cmdline:
    allow:
       - kernel-parameter-1=1
       - kernel-parameter-2=*
 
+(ref-gadget-snap-format-volumes-defining-the-structure-and-content-for-the-images-to-be-written)=
 # Volumes defining the structure and content for the images to be written
+(ref-gadget-snap-format-into-one-or-more-block-devices-of-the-gadget-device-each-volume-in)=
 # into one or more block devices of the gadget device. Each volume in
+(ref-gadget-snap-format-in-the-structure-represents-a-different-image-for-a-disk-in-the-device)=
 # in the structure represents a different image for a "disk" in the device.
+(ref-gadget-snap-format-optional)=
 # (optional)
 volumes:
 
@@ -399,32 +419,49 @@ One must ensure that `registration.proposed-serial`  is set to a _unique value_ 
 ```bash
 #!/bin/sh
 
+(ref-gadget-snap-format-optionally-set-the-url-of-the-service)=
 # optionally set the url of the service
 snapctl set device-service.url="https://device-service"
 
+(ref-gadget-snap-format-set-optional-extra-http-headers-for-requests-to-the-service)=
 # set optional extra HTTP headers for requests to the service
 snapctl set device-service.headers='{"api-key": "API-KEY-VALUE"}'
 
+(ref-gadget-snap-format-set-as-offline-to-prevent-the-system-from-fetching-a-device-serial-assertion)=
 # set as offline to prevent the system from fetching a device serial assertion
+(ref-gadget-snap-format-and-unset-to-restore-the-default-functionality)=
 # and unset to restore the default functionality
 snapctl set device-service.access=offline
 
+(ref-gadget-snap-format-if-device-serviceaccess-and-device-serviceurl-are-both-unset-then-the)=
 # If device-service.access and device-service.url are both unset, then the
+(ref-gadget-snap-format-storeaccess-system-option-will-be-used-to-determine-whether-or-not-a-device)=
 # store.access system option will be used to determine whether or not a device
+(ref-gadget-snap-format-serial-assertion-should-be-fetched)=
 # serial assertion should be fetched
 
+(ref-gadget-snap-format-set-an-optional-proposed-serial-identifier-depending-on-the-service)=
 # set an optional proposed serial identifier, depending on the service
+(ref-gadget-snap-format-this-can-end-up-being-ignored)=
 # this can end up being ignored
+(ref-gadget-snap-format-)=
 #
+(ref-gadget-snap-format-this-might-need-to-be-obtained-dynamically-as-the-expected-value-must-be-a-json-string)=
 # this might need to be obtained dynamically. as the expected value must be a JSON string
+(ref-gadget-snap-format-one-must-be-careful-with-proper-shell-quotation-especially-if-using-command)=
 # one must be careful with proper shell quotation especially if using command 
+(ref-gadget-snap-format-substitution-eg)=
 # substitution, e.g.:
+(ref-gadget-snap-format-snapctl-set--s-registrationproposed-serialget-serial-number)=
 #   snapctl set -s registration.proposed-serial='"'"$(get-serial-number)"'"' 
 snapctl set -s registration.proposed-serial="DEVICE-SERIAL"
 
+(ref-gadget-snap-format-optionally-pass-details-of-the-device-as-the-body-of-registration-request)=
 # optionally pass details of the device as the body of registration request,
+(ref-gadget-snap-format-the-body-is-text-typically-yaml)=
 # the body is text, typically YAML;
 
+(ref-gadget-snap-format-this-might-need-to-be-obtained-dynamically)=
 # this might need to be obtained dynamically 
 snapctl set registration.body='mac: "00:00:00:00:ff:00"'
 ```

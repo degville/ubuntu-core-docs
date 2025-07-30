@@ -1,3 +1,4 @@
+(ref-index-container-deployment)=
 # Container deployment
 
 Ubuntu Core has been developed specifically to leverage the power of snap packages, with their autonomous upgrades and confined sandbox.

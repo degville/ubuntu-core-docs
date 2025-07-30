@@ -1,3 +1,4 @@
+(ref-boot-the-image-boot-the-image)=
 # Boot the image
 
 After [building and writing](/tutorials/build-your-first-image/build-the-image) a custom image for a Raspberry Pi, the device can now be booted and configured.

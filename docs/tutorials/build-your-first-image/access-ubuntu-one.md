@@ -1,3 +1,4 @@
+(ref-access-ubuntu-one-access-ubuntu-one)=
 # Access Ubuntu One
 
 To use Ubuntu Core, to build and sign an image, or publish a snap, you need an [Ubuntu One](https://login.ubuntu.com/) account.

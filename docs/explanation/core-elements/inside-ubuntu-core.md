@@ -1,3 +1,4 @@
+(ref-inside-ubuntu-core-inside-ubuntu-core)=
 # Inside Ubuntu Core
 
 The kernel, boot assets, runtime environment, applications and device enablement capabilities are all delivered as snaps that are controlled by _snapd_ (the snap daemon), which is itself packaged as a snap.

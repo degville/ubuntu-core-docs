@@ -1,3 +1,4 @@
+(ref-contributing-contribute-to-our-docs)=
 # Contribute to our docs
 
 **We warmly welcome community contributions, suggestions, fixes and constructive feedback.**
@@ -234,8 +235,10 @@ Angle brackets, `<>`, are typically used to show variables in example commands:
 Example variable names are acceptable if you judge that the context makes it clear enough:
 
 ```bash
+(ref-contributing-set-the-working-directory)=
 # set the working directory
 WORKDIR /app
+(ref-contributing-copy-the-repository-files-to-it)=
 # copy the repository files to it
 COPY . /app
 ```

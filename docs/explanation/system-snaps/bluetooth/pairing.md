@@ -1,3 +1,4 @@
+(ref-pairing-device-pairing)=
 # Device pairing
 
 This section teaches how to pair two Bluetooth devices using  *bluetoothctl*  - the command-line interface to BlueZ.

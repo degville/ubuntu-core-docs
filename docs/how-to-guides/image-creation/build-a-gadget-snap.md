@@ -53,8 +53,11 @@ The following gadget repositories contain the reference gadget snap definitions 
 The following is an annotated gadget.yaml file that can be used as the basis for your own gadget snap:
 
 ```yaml
+(ref-build-a-gadget-snap-a-template-gadgetyaml)=
 # A template gadget.yaml
+(ref-build-a-gadget-snap-for-a-full-specification-of-the-gadgetyaml-please-see)=
 # For a full specification of the gadget.yaml, please see:
+(ref-build-a-gadget-snap-httpssnapcraftiodocsthe-gadget-snap)=
 # https://snapcraft.io/docs/the-gadget-snap
 volumes:
   <volume name>:
@@ -122,8 +125,10 @@ volumes:
         type: 0FC63DAF-8483-4772-8E79-3D69D8477DE4
         size: 1M
 
+(ref-build-a-gadget-snap-default-configuration-settings-should-go-here)=
 # Default configuration settings should go here
 
+(ref-build-a-gadget-snap-default-connection-settings-should-go-here)=
 # Default connection settings should go here
 ```
 
@@ -132,40 +137,63 @@ volumes:
 The following is an annotated snapcraft.yaml file that can be used as the basis for your own gadget's snapcraft.yaml:
 
 ```yaml
+(ref-build-a-gadget-snap-a-template-snapcraftyaml)=
 # A template snapcraft.yaml
+(ref-build-a-gadget-snap-for-a-full-specification-of-the-snapcraftyaml-please-see)=
 # For a full specification of the snapcraft.yaml, please see:
+(ref-build-a-gadget-snap-httpssnapcraftiodocssnapcraft-yaml-reference)=
 # https://snapcraft.io/docs/snapcraft-yaml-reference
 
+(ref-build-a-gadget-snap-do-not-feel-obligated-to-perfectly-adhere-to-this-style-but-strive-to-include)=
 # Do not feel obligated to perfectly adhere to this style, but strive to include
+(ref-build-a-gadget-snap-as-much-metadata-as-possible)=
 # as much metadata as possible.
 
+(ref-build-a-gadget-snap-the-name-should-be-generic----do-not-leak-secret-information)=
 # The name should be generic -- do not leak secret information!
+(ref-build-a-gadget-snap-a-store-prefix-should-be-considered-as-secret-information)=
 # A store prefix should be considered as secret information.
+(ref-build-a-gadget-snap-the-snaps-here-which-include-one-will-insert-it-during-builds-by-using-a)=
 # The snaps here which include one will insert it during builds by using a
+(ref-build-a-gadget-snap-secret-consumed-by-the-relevant-workflow)=
 # secret consumed by the relevant workflow.
 name: <platform>
+(ref-build-a-gadget-snap-the-version-is-largely-human-readable-but-should-be-meaningful)=
 # The version is largely human readable, but should be meaningful.
+(ref-build-a-gadget-snap-for-instance-if-the-device-boots-with-grub-have-the-version-match-the-grub)=
 # For instance, if the device boots with GRUB, have the version match the GRUB
+(ref-build-a-gadget-snap-release-used)=
 # release used.
 adopt-info|version: <grub|u-boot|some useful string>
+(ref-build-a-gadget-snap-the-base-of-the-snap-should-match-the-base-of-the-ubuntu-core-system)=
 # The base of the snap should match the base of the Ubuntu Core system.
 base: <base>
+(ref-build-a-gadget-snap-build-base-should-only-be-used-if-creating-a-gadget-for-a-devel-release-of-ubuntu-core)=
 # build-base should only be used if creating a gadget for a devel release of Ubuntu Core.
 type: gadget
+(ref-build-a-gadget-snap-the-grade-should-always-be-stable-unless-the-gadget-is-using-a-devel-grade-build-base)=
 # The grade should always be stable unless the gadget is using a devel-grade build-base.
 grade: stable
+(ref-build-a-gadget-snap-the-confinement-should-always-be-strict)=
 # The confinement should always be strict.
 confinement: strict
+(ref-build-a-gadget-snap-the-summary-should-be-short-and-simple)=
 # The summary should be short and simple.
 summary: An Ubuntu Core gadget for the <platform>
+(ref-build-a-gadget-snap-always-include-license-information)=
 # Always include license information.
+(ref-build-a-gadget-snap-valid-licenses-httpsgithubcomsnapcoresnapdblobmasterspdxlicensesgo)=
 # Valid licenses: https://github.com/snapcore/snapd/blob/master/spdx/licenses.go
 license: "CC-BY-SA-4.0 AND ..."
+(ref-build-a-gadget-snap-this-repository-is-upstream-for-this-gadget-optionally-include-your-contact)=
 # This repository is upstream for this gadget. Optionally include your contact
+(ref-build-a-gadget-snap-information)=
 # information.
 issues: https://github.com/canonical/iot-field-gadget-snap/issues
 website: https://github.com/canonical/iot-field-gadget-snap/tree/main
+(ref-build-a-gadget-snap-the-description-should-include-boilerplate-information-and-a-description-of)=
 # The description should include boilerplate information and a description of
+(ref-build-a-gadget-snap-any-nuances-with-this-gadget-target-platform)=
 # any nuances with this gadget target platform.
 description: |
   This snap provides the <bootloader> binaries for booting <platform>.
@@ -182,17 +210,23 @@ description: |
 
   All provided: licenses/
 
+(ref-build-a-gadget-snap-if-you-want-the-gadgetyaml-to-refer-to-assets-provided-by-the-kernel)=
 # If you want the gadget.yaml to refer to assets provided by the kernel
+(ref-build-a-gadget-snap-instead-of-this-snap-use-this-key-see)=
 # instead of this snap, use this key. See:
+(ref-build-a-gadget-snap-httpssnapcraftiodocssnapcraft-top-level-metadata)=
 # https://snapcraft.io/docs/snapcraft-top-level-metadata
 assumes: [kernel-assets]
 
+(ref-build-a-gadget-snap-at-a-minimum-the-snap-should-build-natively)=
 # At a minimum the snap should build natively.
 architectures:
   - build-on:  [<arch>]
     build-for: [<arch>]
 
+(ref-build-a-gadget-snap-any-additional-repositories-required)=
 # Any additional repositories required.
+(ref-build-a-gadget-snap-for-instance-if-you-are-building-on-amd64-for-arm64)=
 # For instance, if you are building on AMD64 for ARM64,
 package-repositories:
   - type: apt
@@ -202,8 +236,11 @@ package-repositories:
     key-id: F6ECB3762474EDA9D21B7022871920D1991BC93C
     url: http://ports.ubuntu.com/ubuntu-ports
 
+(ref-build-a-gadget-snap-please-provide-descriptive-comments-as-necessary-not-everything-needs-to)=
 # Please provide descriptive comments as necessary. Not everything needs to
+(ref-build-a-gadget-snap-be-documented-or-explained-but-explaining-why-things-are-done-can-always-help)=
 # be documented or explained, but explaining why things are done can always help
+(ref-build-a-gadget-snap-people-who-are-learning)=
 # people who are learning!
 parts:
   # If GRUB is specified as the bootloader in the gadget.yaml, then this
@@ -341,11 +378,17 @@ parts:
       mkimage -d boot.scr.in \
         "${CRAFT_PART_INSTALL}/boot.scr"
 
+(ref-build-a-gadget-snap-any-necessary-hooks-for-instance-specify-the-api-key-here-to-be-used)=
 # Any necessary hooks. For instance, specify the API key here to be used
+(ref-build-a-gadget-snap-by-the-prepare-device-hook-at-runtime)=
 # by the prepare-device hook at runtime.
+(ref-build-a-gadget-snap-if-you-dont-know-what-an-api-key-is-feel-free-to-remove-this)=
 # If you don't know what an API key is, feel free to remove this.
+(ref-build-a-gadget-snap-please-do-not-check-your-api-key-into-vcs)=
 # PLEASE do not check your API key into VCS :)
+(ref-build-a-gadget-snap-the-snaps-here-which-include-one-will-insert-it-during-builds-by-using-a)=
 # The snaps here which include one will insert it during builds by using a
+(ref-build-a-gadget-snap-secret-consumed-by-the-relevant-workflow)=
 # secret consumed by the relevant workflow.
 hooks:
   prepare-device:

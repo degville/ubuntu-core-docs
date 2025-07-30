@@ -1,3 +1,4 @@
+(ref-build-the-image-build-the-image)=
 # Build the image
 
 Images are built from the recipe contained in the [model assertion](/tutorials/build-your-first-image/create-a-model) using [ubuntu-image](https://github.com/canonical/ubuntu-image), a tool to generate a bootable image.

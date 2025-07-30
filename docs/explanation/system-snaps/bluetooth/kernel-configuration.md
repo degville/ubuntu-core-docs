@@ -1,3 +1,4 @@
+(ref-kernel-configuration-kernel-configuration)=
 # Kernel configuration
 
 The Ubuntu Core officially supports Linux kernel version 4.4 therefore any new IoT device that is Ubuntu Core based should consider using it if possible. Moreover this is a long term supported kernel by the Linux kernel community.

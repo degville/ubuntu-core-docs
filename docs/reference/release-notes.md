@@ -1,3 +1,4 @@
+(ref-release-notes-release-notes)=
 # Release notes
 
 This page outlines the release notes of Ubuntu Core, summarising new features, bug fixes and changes in each version.

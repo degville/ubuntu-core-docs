@@ -1,3 +1,4 @@
+(ref-index-bluetooth)=
 # Bluetooth
 
 Bluetooth is a standard for wireless communication on short distances. It standardised multiple profiles for different use-cases such as music streaming, serial connections, message exchange, phone calls, and many others. It has been first published in 1994 and since then has been updated several times. The recent version called Bluetooth 5 is a major update and step forward towards the IoT market and it's needs.

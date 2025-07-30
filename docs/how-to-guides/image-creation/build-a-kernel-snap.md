@@ -42,42 +42,67 @@ Canonical’s IoT Devices Field team maintains a [GitHub repository](https://git
 The following is an annotated snapcraft.yaml file that can be used as a foundation for your own kernel snap:
 
 ```yaml
+(ref-build-a-kernel-snap-a-template-snapcraftyaml)=
 # A template snapcraft.yaml
+(ref-build-a-kernel-snap-for-a-full-specification-of-the-snapcraftyaml-please-see)=
 # For a full specification of the snapcraft.yaml, please see:
+(ref-build-a-kernel-snap-httpssnapcraftiodocssnapcraft-yaml-reference)=
 # https://snapcraft.io/docs/snapcraft-yaml-reference
 
+(ref-build-a-kernel-snap-do-not-feel-obligated-to-perfectly-adhere-to-this-style-but-strive-to-include)=
 # Do not feel obligated to perfectly adhere to this style, but strive to include
+(ref-build-a-kernel-snap-as-much-metadata-as-possible)=
 # as much metadata as possible.
 
+(ref-build-a-kernel-snap-the-name-should-be-generic----do-not-leak-secret-information)=
 # The name should be generic -- do not leak secret information!
+(ref-build-a-kernel-snap-a-store-prefix-should-be-considered-as-secret-information)=
 # A store prefix should be considered as secret information.
+(ref-build-a-kernel-snap-the-snaps-here-which-include-one-will-insert-it-during-builds-by-using-a)=
 # The snaps here which include one will insert it during builds by using a
+(ref-build-a-kernel-snap-secret-consumed-by-the-relevant-workflow)=
 # secret consumed by the relevant workflow.
 name: <platform>-kernel
+(ref-build-a-kernel-snap-the-version-is-largely-human-readable-but-should-be-meaningful)=
 # The version is largely human readable, but should be meaningful.
+(ref-build-a-kernel-snap-a-good-place-to-get-the-version-string-from-would-be-the-kernel-part)=
 # A good place to get the version string from would be the kernel part
 adopt-info: kernel
+(ref-build-a-kernel-snap-kernels-should-be-built-based-on-the-release-of-ubuntu-core-being-targeted)=
 # Kernels should be built based on the release of Ubuntu Core being targeted,
+(ref-build-a-kernel-snap-but-do-not-otherwise-require-a-base-as-all-other-snaps-do-as-such-only-a)=
 # but do not otherwise require a base as all other snaps do. As such, only a
+(ref-build-a-kernel-snap-build-base-is-required-and-should-be-something-like-core18core20core22-etc)=
 # build-base is required, and should be something like core18|core20|core22 etc.
 build-base: <base>
+(ref-build-a-kernel-snap-the-type-is-one-of-appgadgetkernelsnapd-as-this-is-a-kernel-snap)=
 # The type is one of app|gadget|kernel|snapd, as this is a kernel snap...
 type: kernel
+(ref-build-a-kernel-snap-the-grade-should-always-be-stable-unless-the-kernel-is-using-a-devel-grade)=
 # The grade should always be stable unless the kernel is using a devel-grade
+(ref-build-a-kernel-snap-build-base-options-are-stabledevel)=
 # build-base. Options are stable|devel
 grade: stable
+(ref-build-a-kernel-snap-the-confinement-should-always-be-strict-options-are-strictdevmode)=
 # The confinement should always be strict. Options are strict|devmode
 confinement: strict
+(ref-build-a-kernel-snap-the-summary-should-be-short-and-simple)=
 # The summary should be short and simple.
 summary: An Ubuntu Core kernel for the <platform>
+(ref-build-a-kernel-snap-always-include-license-information)=
 # Always include license information.
+(ref-build-a-kernel-snap-valid-licenses-httpsgithubcomsnapcoresnapdblobmasterspdxlicensesgo)=
 # Valid licenses: https://github.com/snapcore/snapd/blob/master/spdx/licenses.go
 license: "CC-BY-SA-4.0 AND GPL-2.0 AND ..."
+(ref-build-a-kernel-snap-this-repository-is-upstream-for-this-kernel-optionally-include-your-contact)=
 # This repository is upstream for this kernel. Optionally include your contact
+(ref-build-a-kernel-snap-information)=
 # information.
 issues: https://github.com/canonical/iot-field-kernel-snap/issues
 website: https://github.com/canonical/iot-field-kernel-snap/tree/main
+(ref-build-a-kernel-snap-the-description-should-include-boilerplate-information-and-a-description-of)=
 # The description should include boilerplate information and a description of
+(ref-build-a-kernel-snap-any-nuances-with-this-kernels-target-platform)=
 # any nuances with this kernel's target platform.
 description: |
   This snap provides the kernel image, modules, and firmware blobs for running
@@ -92,16 +117,23 @@ description: |
 
   All provided: licenses/
 
+(ref-build-a-kernel-snap-at-a-minimum-the-snap-should-build-natively)=
 # At a minimum the snap should build natively.
+(ref-build-a-kernel-snap-see-httpssnapcraftiodocsreference-architectures)=
 # See: https://snapcraft.io/docs/reference-architectures
+(ref-build-a-kernel-snap-arch-options-are-amd64arm64armhfppc64elriscv64s390x)=
 # <arch> options are amd64|arm64|armhf|ppc64el|riscv64|s390x
+(ref-build-a-kernel-snap-note-i386-is-legal-for-base-core18-snaps)=
 # Note: i386 is legal for base: core{,18} snaps
+(ref-build-a-kernel-snap-note-riscv64-is-legal-for-base-core202224-snaps)=
 # Note: riscv64 is legal for base: core{20,22,24,...} snaps
+(ref-build-a-kernel-snap-for-snaps-with-build-base-core22-and-earlier-use-the-architectures-syntax)=
 # For snaps with {build-,}base core22 and earlier, use the architectures syntax:
 architectures:
   # If only native builds are done, build-for can be omitted
   - build-on:  [<arch>]
     build-for: [<arch>]
+(ref-build-a-kernel-snap-for-snaps-with-build-base-core24-and-later-use-the-platforms-syntax)=
 # For snaps with {build-,}base core24 and later, use the platforms syntax:
 platforms:
   # If <name> is one of amd64|arm64|armhf|ppc64el|riscv64|s390x, build-{on,for} are implicit
@@ -109,7 +141,9 @@ platforms:
     build-on:  [<arch>]
     build-for: [<arch>] 
 
+(ref-build-a-kernel-snap-any-additional-repositories-required)=
 # Any additional repositories required.
+(ref-build-a-kernel-snap-for-instance-if-you-are-building-on-amd64-for-arm64)=
 # For instance, if you are building on AMD64 for ARM64,
 package-repositories:
   - type: apt
@@ -119,41 +153,74 @@ package-repositories:
     key-id: F6ECB3762474EDA9D21B7022871920D1991BC93C
     url: http://ports.ubuntu.com/ubuntu-ports
 
+(ref-build-a-kernel-snap-a-kernel-snap-breaks-down-into-four-major-components)=
 # A kernel snap breaks down into four major components:
+(ref-build-a-kernel-snap-1-the-kernel-image-itself-vmlinuz-bzimage-image-etc)=
 #   1) The kernel image itself (vmlinuz, bzImage, Image, etc.)
+(ref-build-a-kernel-snap-2-the-kernel-modules-ko)=
 #   2) The kernel modules (*.ko)
+(ref-build-a-kernel-snap-3-the-kernel-firmware-blobs-provided-by-linux-firmware)=
 #   3) The kernel firmware blobs (provided by linux-firmware)
+(ref-build-a-kernel-snap-4-the-initrd-a-cpio-archive)=
 #   4) the initrd (a CPIO archive)
+(ref-build-a-kernel-snap-the-final-kernel-payload-can-be-booted-in-a-couple-different-ways-depending)=
 # The final kernel payload can be booted in a couple different ways, depending
+(ref-build-a-kernel-snap-on-the-capabilities-of-the-target-platform)=
 # on the capabilities of the target platform:
+(ref-build-a-kernel-snap-a-as-an-efi-binary)=
 #   a) as an EFI binary
+(ref-build-a-kernel-snap-on-sufficiently-recent-platforms-eg-x86-64-since-2015-the-kernel)=
 #      On sufficiently recent platforms (e.g. x86_64 since 2015), the kernel
+(ref-build-a-kernel-snap-can-be-booted-as-an-efi-binary-application-directly-by-the-motherboard)=
 #      can be booted as an EFI binary application directly by the motherboard
+(ref-build-a-kernel-snap-firmware-this-capability-requires-efistub-support-in-the-kernel-see-the)=
 #      firmware. This capability requires EFISTUB support in the kernel. See the
+(ref-build-a-kernel-snap-efistub-documentation-httpsdocskernelorgadmin-guideefi-stubhtml)=
 #      EFISTUB documentation: https://docs.kernel.org/admin-guide/efi-stub.html
+(ref-build-a-kernel-snap-b-by-grub-or-some-other-bootloader)=
 #   b) by GRUB or some other bootloader
+(ref-build-a-kernel-snap-this-is-the-more-traditional-method-for-booting-kernels-which-involves)=
 #      This is the more traditional method for booting kernels, which involves
+(ref-build-a-kernel-snap-some-intermediary-binary-program-like-grub-or-u-boot-to-load-the-kernel)=
 #      some intermediary binary program like GRUB or u-boot to load the kernel
+(ref-build-a-kernel-snap-into-memory-and-then-execute-it)=
 #      into memory and then execute it.
+(ref-build-a-kernel-snap-on-ubuntu-core-b-is-the-expected-approach-the-bootloader-is-shipped-by)=
 # On Ubuntu Core, (b) is the expected approach. The bootloader is shipped by
+(ref-build-a-kernel-snap-the-gadget-and-controls-the-bootflow-process-of-the-target-hardware-whereas)=
 # the gadget and controls the bootflow process of the target hardware, whereas
+(ref-build-a-kernel-snap-option-a-would-be-more-often-seen-on-normal-consumer-devices-rather-than-the)=
 # option (a) would be more often seen on normal consumer devices rather than the
+(ref-build-a-kernel-snap-iot-edge-appliances-ubuntu-core-usually-targets)=
 # IoT edge appliances Ubuntu Core usually targets.
 
+(ref-build-a-kernel-snap-once-the-kernel-has-done-its-initialization-steps-it-then-executes-bininit)=
 # Once the kernel has done it's initialization steps, it then executes bin/init
+(ref-build-a-kernel-snap-from-either-the-initrd-or-the-root-filesystem-on-disk-generally-speaking)=
 # from either the initrd or the root filesystem on disk. Generally speaking,
+(ref-build-a-kernel-snap-an-initrd-can-be-forgone-if-all-required-kernel-modules-for-booting-the)=
 # an initrd can be forgone if all required kernel modules for booting the
+(ref-build-a-kernel-snap-target-platform-are-builtin-to-the-kernel-directly-instead-of-being-built)=
 # target platform are builtin to the kernel directly instead of being built
+(ref-build-a-kernel-snap-as-separate-modules-however-in-the-particular-case-of-ubuntu-core-the)=
 # as separate modules. HOWEVER, In the particular case of Ubuntu Core, the
+(ref-build-a-kernel-snap-initrd-provides-several-key-components-for-bootstrapping-an-ubuntu-core)=
 # initrd provides several key components for bootstrapping an Ubuntu Core
+(ref-build-a-kernel-snap-system-as-a-result-even-if-all-kernel-modules-are-builtin-to-the-kernel)=
 # system. As a result, even if ALL kernel modules are builtin to the kernel
+(ref-build-a-kernel-snap-directly-an-initrd-will-still-be-required)=
 # directly, an initrd will STILL be required.
 
+(ref-build-a-kernel-snap-thus-a-typical-bootflow-is)=
 # Thus, a typical bootflow is:
+(ref-build-a-kernel-snap-bootloader-gadget---kernel-kernel-snap---initrd-kernel-snap---userspace-base-snap)=
 # bootloader (gadget) -> kernel (kernel snap) -> initrd (kernel snap) -> userspace (base snap)
 
+(ref-build-a-kernel-snap-please-provide-descriptive-comments-as-necessary-not-everything-needs-to)=
 # Please provide descriptive comments as necessary. Not everything needs to
+(ref-build-a-kernel-snap-be-documented-or-explained-but-explaining-why-things-are-done-can-always-help)=
 # be documented or explained, but explaining why things are done can always help
+(ref-build-a-kernel-snap-people-who-are-learning)=
 # people who are learning!
 parts:
   # The kernel itself can either be repackaged from some upstream or built from
@@ -497,19 +564,33 @@ parts:
         -f ${CRAFT_PART_SRC}/fitImage-${CRAFT_ARCH_BUILD_FOR}.its \
         ${CRAFT_PART_INSTALL}/kernel.img
 
+(ref-build-a-kernel-snap-one-reason-for-building-your-own-kernel-snap-is-to-include-out-of-tree-kernel)=
 # One reason for building your own kernel snap is to include out of tree kernel
+(ref-build-a-kernel-snap-modules-this-means-that-knowing-how-to-load-those-modules-and-blacklist)=
 # modules. This means that knowing how to load those modules (and blacklist
+(ref-build-a-kernel-snap-conflicting-ones-is-very-important-there-are-several-ways-to-load-kernel)=
 # conflicting ones) is very important. There are several ways to load kernel
+(ref-build-a-kernel-snap-modules-on-ubuntu-core-systems-but-it-come-down-to-one-of-two-interfaces)=
 # modules on Ubuntu Core systems, but it come down to one of two interfaces:
+(ref-build-a-kernel-snap-kernel-module-load-httpssnapcraftiodocskernel-module-load-interface)=
 # kernel-module-load: https://snapcraft.io/docs/kernel-module-load-interface
+(ref-build-a-kernel-snap-kernel-module-load-allows-specifying-modules-by-name-to-either-load-on-boot)=
 #   kernel-module-load allows specifying modules by name to either load on-boot
+(ref-build-a-kernel-snap-or-dynamically-via-snapctl-kmod-with-optional-arguments-and-a-list-of)=
 #   or dynamically (via snapctl kmod) with optional arguments, and a list of
+(ref-build-a-kernel-snap-modules-to-deny-loading)=
 #   modules to deny loading.
+(ref-build-a-kernel-snap-kernel-module-control-httpssnapcraftiodocskernel-module-control-interface)=
 # kernel-module-control: https://snapcraft.io/docs/kernel-module-control-interface
+(ref-build-a-kernel-snap-kernel-module-control-gives-broad-sweeping-control-over-any-and-all-kernel)=
 #   kernel-module-control gives broad sweeping control over any and all kernel
+(ref-build-a-kernel-snap-modules-which-can-be-loaded-or-unloaded)=
 #   modules which can be loaded or unloaded.
+(ref-build-a-kernel-snap-kernel-module-load-should-always-be-preferred-as-it-is-a-more-targeted-interface)=
 # kernel-module-load should always be preferred as it is a more targeted interface.
+(ref-build-a-kernel-snap-in-order-for-this-interface-to-autoconnect-a-support-ticket-must-be-filed-or)=
 # In order for this interface to autoconnect, a support ticket must be filed or
+(ref-build-a-kernel-snap-a-forum-post-made)=
 # a forum post made.
 plugs:
   load-module-foo:
@@ -538,6 +619,7 @@ snap install snapcraft --classic
 With _snapcraft.yaml_ complete, and the kernel source either cloned locally or linked to from the snapcraft.yaml, the `snapcraft` command will build the kernel. As mentioned earlier, it's often more convenient to build the kernel within the host environment, using `--destructive-mode`:
 
 ```bash
+(ref-build-a-kernel-snap-snapcraft---destructive-mode---build-forarm64)=
 # snapcraft --destructive-mode --build-for=arm64
 [...]
 Snapped kernal-snap-name_arm64.snap
@@ -546,6 +628,7 @@ Snapped kernal-snap-name_arm64.snap
 If the above command was executed within an LXD environment, the resultant kernel snap can be extracted with the following commands:
 
 ```bash
+(ref-build-a-kernel-snap-exit)=
 # exit
 $ lxc file pull path/to/kernal-snap-name_arm64.snap .
 ```
