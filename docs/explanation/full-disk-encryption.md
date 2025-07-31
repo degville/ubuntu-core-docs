@@ -42,7 +42,7 @@ When run normally, the snap content comes from snaps in the encrypted data parti
 
 If an encrypted drive is detected, but the TPM does not contain a valid key, the Ubuntu Core boot process will prompt for a recovery key. See [Using recovery keys](/how-to-guides/manage-ubuntu-core/use-a-recovery-mode.md#using-recovery-keys) for further details.
 
-For more information on how Ubuntu Core uses these partitions, what they contain, and how they boot, see [Storage layout](/explanation/core-elements/storage-layout).
+For more information on how Ubuntu Core uses these partitions, what they contain, and how they boot, see {ref}`Storage layout <explanation-core-elements-storage-layout>`.
 
 ## Disabling encryption
 
@@ -54,7 +54,7 @@ This option is provided by the “storage-safety” setting in the [model assert
 - **prefer-encrypted**: do encrypt if the hardware supports it.
 - **prefer-unencrypted**: do not encrypt by default, even if the device supports encryption.
 
-See [Add custom snaps](/how-to-guides/image-creation/add-custom-snaps) for further details on building an image from a model assertion.
+See {ref}`Add custom snaps <how-to-guides-image-creation-add-custom-snaps>` for further details on building an image from a model assertion.
 
 ## Model grade
 

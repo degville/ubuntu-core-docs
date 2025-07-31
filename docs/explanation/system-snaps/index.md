@@ -7,9 +7,9 @@ System snaps provide additional device functionality, usually associated with co
 
 There are several system snaps that can be used to connect to a local or wide area network, as well as local devices over Bluetooth.
 
-- [Bluetooth manager](bluetooth/index)
-- [Modem Manager](modem-manager/index)
-- [Network Manager](network-manager/index)
+- {ref}`Bluetooth manager <ref-index-bluetooth>`
+- {ref}`Modem Manager <explanation-system-snaps-modem-manager-index>`
+- {ref}`Network Manager <explanation-system-snaps-network-manager-index>`
 
 ```{toctree}
 :hidden:

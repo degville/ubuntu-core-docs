@@ -12,7 +12,7 @@ $ cat /proc/cmdline
 snapd_recovery_mode=run console=ttyS0,115200n8 console=tty1 panic=-1
 ```
 
-In addition to parameters supported by the kernel, there are also *Ubuntu Core-specific* [kernel boot parameters](/reference/kernel-boot-parameters).
+In addition to parameters supported by the kernel, there are also *Ubuntu Core-specific* {ref}`kernel boot parameters <reference-kernel-boot-parameters>`.
 
 ## Dynamic kernel parameter modifications
 
@@ -65,7 +65,7 @@ The recommended way to add static parameters is by using the `kernel-cmdline` st
 
 ### Files for modification
 
-The legacy way of customizing statically the kernel command line is by adding one of two possible files to the top level of the filesystem in the [Gadget snap](/reference/gadget-snap-format):
+The legacy way of customizing statically the kernel command line is by adding one of two possible files to the top level of the filesystem in the {ref}`Gadget snap <reference-gadget-snap-format>`:
 
  1. Add a `cmdline.extra` file containing the extra kernel command line arguments, such as  ` custom.option=1`. 
 
@@ -95,7 +95,7 @@ Both kernel command line extension methods also apply to install mode.
 
 The gadget snap can contain only one of `cmdline.full` or `cmdline.extra`; the presence of both files at the same time is treated as an error.
 
-Extending the kernel command line using drop-in files is also supported on systems using the full disk encryption. See [Full disk encryption](/explanation/full-disk-encryption) for more details.
+Extending the kernel command line using drop-in files is also supported on systems using the full disk encryption. See {ref}`Full disk encryption <explanation-full-disk-encryption>` for more details.
 
 ## Customising the kernel command line
 
@@ -109,11 +109,11 @@ The second is to modify an existing gadget snap directly, and this procedure is 
 
 ```{admonition} Splash screen requirements
 :class: tip
-Enabling the Ubuntu Core splash screen requires a modified kernel command line. See [Splash screen configuration](/how-to-guides/image-creation/add-a-splash-screen) for details.
+Enabling the Ubuntu Core splash screen requires a modified kernel command line. See {ref}`Splash screen configuration <how-to-guides-image-creation-add-a-splash-screen>` for details.
 ```
 ## Modify an existing gadget snap
 
-When building your own [custom Ubuntu Core image](/how-to-guides/image-creation/add-custom-snaps), the gadget snap that you include can be  modified manually to include the kernel command line file.
+When building your own {ref}`custom Ubuntu Core image <how-to-guides-image-creation-add-custom-snaps>`, the gadget snap that you include can be  modified manually to include the kernel command line file.
 
 To do this, first retrieve the gadget snap you wish to use in the image. The following command, for example, will download the PC gadget snap with a base of [core24](https://snapcraft.io/docs/base-snaps):
 
@@ -158,7 +158,7 @@ With the _cmdline.extra_ or _cmdline.full_ file created, the gadget snap can be 
 snap pack squashfs-root
 ```
 
-The final step is to build a new Ubuntu Core image with the modified gadget snap. This requires a [model assertion](/reference/assertions/model) with `grade: dangerous` set (as we are using local snaps for the build - this would not be necessary if we have uploaded the gadget to the store) and the `ubuntu-image` command to compile the image. See [Custom images](/how-to-guides/image-creation/add-custom-snaps) for more details.
+The final step is to build a new Ubuntu Core image with the modified gadget snap. This requires a {ref}`model assertion <reference-assertions-model>` with `grade: dangerous` set (as we are using local snaps for the build - this would not be necessary if we have uploaded the gadget to the store) and the `ubuntu-image` command to compile the image. See {ref}`Custom images <how-to-guides-image-creation-add-custom-snaps>` for more details.
 
 You can then build the image with the new gadget snap using _ubuntu-image_:
 

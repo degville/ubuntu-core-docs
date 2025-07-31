@@ -1,17 +1,17 @@
 (how-to-guides-manage-ubuntu-core-create-a-recovery-system-from-the-api)=
 # Create a recovery system from the API
 
-An [Ubuntu Core image](/tutorials/build-your-first-image/index) contains a recovery system created from the snaps listed in the model. This recovery system is used by a [Recovery mode](/explanation/recovery-modes) to restore a system  to the state at which the image was created.
+An {ref}`Ubuntu Core image <ref-index-build-your-first-image>` contains a recovery system created from the snaps listed in the model. This recovery system is used by a {ref}`Recovery mode <explanation-recovery-modes>` to restore a system  to the state at which the image was created.
 
 One issue with this approach is that there may be snaps included in the recovery system that have since received security updates. This will have been updated automatically in the running system, but not in the image-based recovery system. 
 
-To resolve this, the recovery system [snapd REST API](https://snapcraft.io/docs/snapd-api#heading--systems-get) enables users to create new recovery systems with snaps that are constrained by a set of [validation-sets assertions](/reference/assertions/validation-set).
+To resolve this, the recovery system [snapd REST API](https://snapcraft.io/docs/snapd-api#heading--systems-get) enables users to create new recovery systems with snaps that are constrained by a set of {ref}`validation-sets assertions <reference-assertions-validation-set>`.
 
 This is specifically useful for ensuring that a recovery system is built from a set of snaps with well known revisions.
 
 ## Recovery system snaps
 
-Any recovery system created using the API is derived from a device’s current [model](/reference/assertions/model). Each required snap in the model will be a part of any newly created recovery system. Optional snaps in the model will be included if the snap is already installed, or if the snap is required by any validation sets that are provided.
+Any recovery system created using the API is derived from a device’s current {ref}`model <reference-assertions-model>`. Each required snap in the model will be a part of any newly created recovery system. Optional snaps in the model will be included if the snap is already installed, or if the snap is required by any validation sets that are provided.
 
 ### Validation sets
 

@@ -9,25 +9,25 @@ This same process can be used to build Ubuntu Core images for various hardware a
 
 
 
-1. [Requirements](requirements)
-1. [Create an Ubuntu One account](access-ubuntu-one)
+1. {ref}`Requirements <ref-requirements-requirements>`
+1. {ref}`Create an Ubuntu One account <ref-access-ubuntu-one-access-ubuntu-one>`
    1. [Create the account online](access-ubuntu-one.md#create-an-ubuntu-one-account)
    1. [Retrieve your developer account id](access-ubuntu-one.md#retrieve-your-developer-account-id)
-1. [Create the model assertion](create-a-model)
+1. {ref}`Create the model assertion <ref-create-a-model-create-a-model>`
    1. [Download a model assertion](create-a-model.md#download-a-model-file)
    1. [Edit the model assertion](create-a-model.md#edit-the-model-file)
    1. [authority-id and brand-id](create-a-model.md#authority-id-and-brand-id)
    1. [timestamp](create-a-model.md#timestamp)
    1. [snaps](create-a-model.md#snaps)
    1. [A complete model assertion](create-a-model.md#complete-model-example)
-1. [Sign the model assertion](sign-the-model)
+1. {ref}`Sign the model assertion <ref-sign-the-model-sign-the-model>`
    1. [Create a key](sign-the-model.md#create-a-key)
    1. [Register the key](sign-the-model.md#register-the-key)
-   1. [Sign the model](sign-the-model.md#sign-the-model)
-1. [Build and write the image](build-the-image)
+   1. {ref}`Sign the model <ref-sign-the-model-sign-the-model>`
+1. {ref}`Build and write the image <ref-build-the-image-build-the-image>`
    1. [Compile the image](build-the-image.md#compile-the-image)
    1. [Write the image](build-the-image.md#write-the-image)
-1. [Boot the image](boot-the-image)
+1. {ref}`Boot the image <ref-boot-the-image-boot-the-image>`
    1. [Boot Ubuntu Core](boot-the-image.md#boot-ubuntu-core)
    1. [Configure a network connection](boot-the-image.md#configure-a-network-connection)
    1. [Connect to the device](boot-the-image.md#connect-to-the-device)

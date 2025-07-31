@@ -7,7 +7,7 @@ Application management, system configuration and update schedules in Ubuntu Core
 
 ```{admonition} Create your own images
 :class: tip
-While Ubuntu Core is primarily intended for developers to build custom images tailored for their application and targeted hardware, this page is a great place to start after you've just installed [pre-built Ubuntu Core images](/tutorials/try-pre-built-images/index) and want to learn a few of the basic principles quickly.
+While Ubuntu Core is primarily intended for developers to build custom images tailored for their application and targeted hardware, this page is a great place to start after you've just installed {ref}`pre-built Ubuntu Core images <ref-index-try-pre-built-images>` and want to learn a few of the basic principles quickly.
 ```
 
 ## Quickstart project
@@ -24,7 +24,7 @@ snap set wpe-webkit-mir-kiosk url=https://ubuntu.com/core
 
 The first command installs [ubuntu-frame](https://snapcraft.io/ubuntu-frame). This provides the graphical display for developers deploying embedded applications with a GUI. The next snap, [wpe-webkit-mir-kiosk](https://snapcraft.io/wpe-webkit-mir-kiosk), installs an open-source web viewer and we use `snap set` to configure this with the web address we'd like to show. 
 
-All of this initial configuration could be done during the image build to control the complete user experience from the first boot. To learn how to create your own custom image, see our [Build an image](/tutorials/build-your-first-image/index) guide.
+All of this initial configuration could be done during the image build to control the complete user experience from the first boot. To learn how to create your own custom image, see our {ref}`Build an image <ref-index-build-your-first-image>` guide.
 
 ## Interfaces
 
@@ -84,7 +84,7 @@ wpe-webkit-mir-kiosk  2.38.5          104    22/stable      glancr      -
 
 The above shows the standard (and initial) set of snaps in a default Ubuntu Core installation alongside those we installed for the above kiosk.
 
-The default state for an Ubuntu Core image, including which snaps it includes, is defined by its [model assertion](/reference/assertions/model). You can view the one being used on the current system with the `snap known model` command, or use `snap known serial` to show the device serial number:
+The default state for an Ubuntu Core image, including which snaps it includes, is defined by its {ref}`model assertion <reference-assertions-model>`. You can view the one being used on the current system with the `snap known model` command, or use `snap known serial` to show the device serial number:
 
 ```bash
 $ snap known serial
@@ -96,7 +96,7 @@ serial: 5764993d-e063-887a-b79c536066ad
 [...]
 ```
 
-For more details on which snaps are included with Ubuntu Core, see [Snaps in Ubuntu Core](/explanation/core-elements/snaps-in-ubuntu-core).
+For more details on which snaps are included with Ubuntu Core, see {ref}`Snaps in Ubuntu Core <ref-snaps-in-ubuntu-core-snaps-in-ubuntu-core>`.
 
 Any snaps you manually install can be removed with the `snap remove` command:
 
@@ -148,5 +148,5 @@ The snap command includes comprehensive help output. To see this, type `snap hel
 
 For more information on how to work with snaps, including how to make data snapshots, how to install specific revisions, see the [Snap Documentation ](https://snapcraft.io/docs/). 
 
-To learn how to create your own custom image, see our [Build an image](/tutorials/build-your-first-image/index) guide.
+To learn how to create your own custom image, see our {ref}`Build an image <ref-index-build-your-first-image>` guide.
 

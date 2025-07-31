@@ -3,9 +3,9 @@
 
 Kernel boot parameters are used to enable, disable or configure kernel-specific features when the system boots. 
 
-On Ubuntu Core, when using the default GNU GRUB bootloader, kernel boot parameters can be configured either in the [Gadget snap](/reference/gadget-snap-format), or through [system options](https://snapcraft.io/docs/system-options). See [Modifying kernel boot parameters](/how-to-guides/manage-ubuntu-core/modify-kernel-options) for further details on each process. It is still possible to use this kernel parameters if not using GRUB, although the way to modify them will depend then on system.
+On Ubuntu Core, when using the default GNU GRUB bootloader, kernel boot parameters can be configured either in the {ref}`Gadget snap <reference-gadget-snap-format>`, or through [system options](https://snapcraft.io/docs/system-options). See {ref}`Modifying kernel boot parameters <how-to-guides-manage-ubuntu-core-modify-kernel-options>` for further details on each process. It is still possible to use this kernel parameters if not using GRUB, although the way to modify them will depend then on system.
 
-Alongside parameters supported by the kernel, such as `splash` to display the [Splash screen configuration](/how-to-guides/image-creation/add-a-splash-screen), Ubuntu Core supports the following additional kernel parameters that permit special access to the system.
+Alongside parameters supported by the kernel, such as `splash` to display the {ref}`Splash screen configuration <how-to-guides-image-creation-add-a-splash-screen>`, Ubuntu Core supports the following additional kernel parameters that permit special access to the system.
 
 ## snapd.debug
 

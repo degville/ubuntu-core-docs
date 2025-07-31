@@ -1,7 +1,7 @@
 (how-to-guides-image-creation-build-a-kernel-snap)=
 # Build a kernel snap
 
-The kernel snap one of the essential snaps that need to be specified in the [model assertion](/reference/assertions/model) when building a [custom image](/how-to-guides/image-creation/add-custom-snaps). The snap can be updated but it cannot be swapped for a different kernel snap.
+The kernel snap one of the essential snaps that need to be specified in the {ref}`model assertion <reference-assertions-model>` when building a {ref}`custom image <how-to-guides-image-creation-add-custom-snaps>`. The snap can be updated but it cannot be swapped for a different kernel snap.
 
 Canonical publishes several reference kernel snaps, alongside kernel snaps for certified public clouds and general purpose computing images for popular physical devices, such as 64-bit x86, Raspberry Pi and RISC-V.
 
@@ -633,5 +633,5 @@ If the above command was executed within an LXD environment, the resultant kerne
 $ lxc file pull path/to/kernal-snap-name_arm64.snap .
 ```
 
-The kernel snap has now been built and is ready to be integrated into an Ubuntu Core image. See [Custom images](/how-to-guides/image-creation/add-custom-snaps) for further details.
+The kernel snap has now been built and is ready to be integrated into an Ubuntu Core image. See {ref}`Custom images <how-to-guides-image-creation-add-custom-snaps>` for further details.
 

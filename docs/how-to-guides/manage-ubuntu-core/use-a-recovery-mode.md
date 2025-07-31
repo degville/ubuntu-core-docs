@@ -16,7 +16,7 @@ Recovery modes are available on Ubuntu Core 20 and later.
 
 Device manufacturers may choose to implement alternative methods to access recovery functionality. These will be specific to those devices.
 
-See [Recovery modes](/explanation/recovery-modes) for more details on each supported recovery mode, what they do, and how they can be used.
+See {ref}`Recovery modes <explanation-recovery-modes>` for more details on each supported recovery mode, what they do, and how they can be used.
 
 ## System mode selection menu
 
@@ -63,7 +63,7 @@ Reboot into "20201117" "recover" mode.
 
 ## Using recovery keys
 
-When using [Full Disk Encryption](/explanation/full-disk-encryption), a device's Trusted Platform Module (TPM) seals the encryption keys necessary to decrypt and boot the device. 
+When using {ref}`Full Disk Encryption <explanation-full-disk-encryption>`, a device's Trusted Platform Module (TPM) seals the encryption keys necessary to decrypt and boot the device. 
 
 These keys can be retrieved with the `snap recovery --show-keys` command:
 

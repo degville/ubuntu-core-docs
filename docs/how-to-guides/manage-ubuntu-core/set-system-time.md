@@ -7,7 +7,7 @@ Regardless of how system time is set, it always moves forward monotonically and 
 
 ## System time update process
 
-The system time value and update process is tightly coupled to the [boots process](/explanation/core-elements/inside-ubuntu-core) and device capabilities. From a fresh boot of the device, the process for setting the time is as follows:
+The system time value and update process is tightly coupled to the {ref}`boots process <ref-inside-ubuntu-core-inside-ubuntu-core>` and device capabilities. From a fresh boot of the device, the process for setting the time is as follows:
 
 1. **initrd**
    When the device boots, _initrd_ first moves system time forward to match the time _initrd_ was built.

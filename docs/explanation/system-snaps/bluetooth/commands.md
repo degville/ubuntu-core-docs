@@ -108,7 +108,7 @@ Profile Descriptor List:
 
 ### Connect OPP Profile
 
-Make sure that the pairing is successfully completed. You can learn how to do it on the [Pairing page](pairing.md).
+Make sure that the pairing is successfully completed. You can learn how to do it on the {ref}`Pairing page <ref-pairing-device-pairing>`.
 
 Once the pairing is successfully completed, it is time to connect the OBEX Object Push profile. To interact with OBEX, the obexctl tool is used. Open another terminal and type
 ```

@@ -1,7 +1,7 @@
 (explanation-remodelling)=
 # Remodelling
 
-The set of snaps that make up a device, and govern its capabilities, are controlled by the [model assertion](/reference/assertions/model), alongside the snap assertions in a given recovery system.
+The set of snaps that make up a device, and govern its capabilities, are controlled by the {ref}`model assertion <reference-assertions-model>`, alongside the snap assertions in a given recovery system.
 
 The model assertion contains:
 
@@ -12,14 +12,14 @@ The model assertion contains:
 
 When one or more of the above elements change, the updated model assertion and its associated image are deployed to the device, authenticated and linked through its serial assertion, to the store. This process is called remodelling.
 
-One example of remodelling is [Upgrading Ubuntu Core](/how-to-guides/manage-ubuntu-core/upgrade-ubuntu-core.md).
+One example of remodelling is {ref}`Upgrading Ubuntu Core <how-to-guides-manage-ubuntu-core-upgrade-ubuntu-core>`.
 ## Remodelling viability
 
 The remodelling process is triggered by either updating the model assertion, running the `snap remodel` command, or from the [snapd the REST API](https://snapcraft.io/docs/snapd-api) (the last two require _snapd 2.61_ or later). Remodelling triggers the generation of a new recovery system, which means care needs to be taken to ensure the [ubuntu-seed](/explanation/core-elements/storage-layout.md#the-ubuntu-seed-partition) partition is sized accordingly.
 
 Remodelling is the responsibility of the snap daemon (_snapd_) running on the device. It both mediates the update process and the re-registration of the device after the update (if required). But the complexity and viability of the remodelling process is dependent on several factors outside of snapd’s control.
 
-At its simplest, a device can be successfully remodelled when using the same model name and the same dedicated Snap Store but with a new model revision where the only difference is an added or removed snap, or changed snap track or channel. The device also needs to have a [Serial assertion](/reference/assertions/serial).
+At its simplest, a device can be successfully remodelled when using the same model name and the same dedicated Snap Store but with a new model revision where the only difference is an added or removed snap, or changed snap track or channel. The device also needs to have a {ref}`Serial assertion <reference-assertions-serial>`.
 
 But if the dedicated Snap Store needs to change, even under the same brand scope, this requires the acquisition of a new serial assertion, and the success or failure of such a process will depend on the context.
 
@@ -27,7 +27,7 @@ With a dedicated Snap Store, the following types of remodelling contexts are pos
 - **same brand/model -> same dedicated Snap Store**
 Works as a simple contextual carrier for the new model.
 - **same brand/model -> different dedicated Snap Store**
-Keeps access to the device state kept on the remodel change, creates a store that uses that state, and then refers to the new dedicated Snap Store. Requires a new serial in the [Serial Vault](https://ubuntu.com/core/services/guide/serial-vault-overview) and the creation of a new  [Serial assertion](/reference/assertions/serial).
+Keeps access to the device state kept on the remodel change, creates a store that uses that state, and then refers to the new dedicated Snap Store. Requires a new serial in the [Serial Vault](https://ubuntu.com/core/services/guide/serial-vault-overview) and the creation of a new  {ref}`Serial assertion <reference-assertions-serial>`.
 
 ## Compatibility
 
@@ -52,8 +52,8 @@ The general practice is that either the operator who invoked `snap remodel` comm
 
 A network connection is not required if there is local access to:
 
-- **the target [Model assertion](/reference/assertions/model) with a new revision**</br>The `series`, `brand-id`, and `model` fields cannot currently be different from the original model.
-- **assertions for any referenced snaps**</br> This includes [snap-declaration](/reference/assertions/snap-declaration) and [snap-revision](/reference/assertions/snap-revision) assertions and the keys necessary for validation of the former.
+- **the target {ref}`Model assertion <reference-assertions-model>` with a new revision**</br>The `series`, `brand-id`, and `model` fields cannot currently be different from the original model.
+- **assertions for any referenced snaps**</br> This includes {ref}`snap-declaration <reference-assertions-snap-declaration>` and {ref}`snap-revision <reference-assertions-snap-revision>` assertions and the keys necessary for validation of the former.
 
 The `snap remodel` command can then be used to list the required snaps and assertions for the new model:
 

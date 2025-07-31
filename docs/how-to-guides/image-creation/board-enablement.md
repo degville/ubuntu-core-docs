@@ -62,7 +62,7 @@ parts:
 
 ## The gadget snap
 
-The [gadget snap](/reference/gadget-snap-format.md) is an essential part of Ubuntu Core. It's responsible for defining and manipulating device-specific system properties and configuration, as well as the boot and file system layout which is used for image building. 
+The {ref}`gadget snap <reference-gadget-snap-format>` is an essential part of Ubuntu Core. It's responsible for defining and manipulating device-specific system properties and configuration, as well as the boot and file system layout which is used for image building. 
 
 You will need to create two files in the `meta` directory of this snap:
 
@@ -107,11 +107,11 @@ You will need to create two files in the `meta` directory of this snap:
                     target: /
 ```
 
-See [Building a gadget snap](/how-to-guides/image-creation/build-a-gadget-snap) for details on how to build the gadget snap.
+See {ref}`Building a gadget snap <how-to-guides-image-creation-build-a-gadget-snap>` for details on how to build the gadget snap.
 
 ## Create the model assertion
 
-Before you can build an image to flash on the board, you need to prepare a [model assertion](/reference/assertions/model) and sign it.
+Before you can build an image to flash on the board, you need to prepare a {ref}`model assertion <reference-assertions-model>` and sign it.
 
 First, prepare a JSON file describing the model assertion:
 
@@ -146,7 +146,7 @@ Additional supported keywords for model assertion are:
 -   `required-snaps`: list of strings describing the list of additional snaps to be preinstalled
 -   `core`: define a custom core snap that needs to be used
 
-See [Model assertion](/reference/assertions/model) for more details on what a model assertion can contain.
+See {ref}`Model assertion <reference-assertions-model>` for more details on what a model assertion can contain.
 
 ## Sign the model assertion
 
@@ -189,7 +189,7 @@ Now you have to sign the model assertion with your key, by piping your JSON mode
 cat roseapple-model.json | snap sign -k my-key | tee roseapple.model
 ```
 
-You can find a more detailed example of this process on the [Custom image building](/tutorials/build-your-first-image/sign-the-model) page.
+You can find a more detailed example of this process on the {ref}`Custom image building <ref-sign-the-model-sign-the-model>` page.
 
 ### Canonical signed assertions
 
