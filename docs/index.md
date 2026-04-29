@@ -90,5 +90,6 @@ Explanation <explanation/index>
 :hidden:
 :maxdepth: 2
 
+Ubuntu Core 26 <ref-release-notes_ubuntu-core-26-release-notes>
 Contributing <contributing/index.md>
 ```
