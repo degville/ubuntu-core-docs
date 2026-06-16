@@ -156,7 +156,7 @@ html_context = {
 # TODO: If your documentation is hosted on https://docs.ubuntu.com/,
 #       uncomment and update as needed.
 
-slug = 'docs'
+slug = 'core/docs'
 
 
 # Template and asset locations
@@ -264,7 +264,8 @@ rediraffe_redirects = "redirects.txt"
 
 # html_js_files = []
 html_js_files = [
-    "js/bundle.js"
+    "js/bundle.js",
+    "js/overwrite_links.js",
 ]
 
 # Specifies a reST snippet to be appended to each .rst file
@@ -325,8 +326,10 @@ myst_heading_anchors = 3
 
 ## Sitemap configuration
 
-html_baseurl = 'https://documentation.ubuntu.com/core/'
+html_baseurl = 'https://ubuntu.com/core/docs'
+ogp_site_url = 'https://ubuntu.com/core/docs'
 sitemap_url_scheme = "{link}"
+sitemap_filename = "doc-sitemap.xml"
 
 intersphinx_mapping = {
     'starter-pack': ('https://canonical-example-product-documentation.readthedocs-hosted.com/en/latest', None)
