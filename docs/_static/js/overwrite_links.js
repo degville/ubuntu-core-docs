@@ -1,6 +1,6 @@
 // Replaces <RTD documentation address> with <new documentation address> in links
 
-const rtd_address = 'canonical-ubuntu-core-docs.readthedocs-hosted.com';
+const rtd_address = 'canonical-ubuntu-core-docs-proxy.readthedocs-hosted.com';
 const new_address = 'ubuntu.com/core/docs';
 
 function escapeRegExp(value) {
